@@ -1,7 +1,7 @@
 const router = require('koa-router')();
 
-const { paymentController } = require('./controllers/payment.controller');
+const { paymentController } = require('./controllers/');
 
-router.post('/payment', paymentController.addPet);
+router.post('/payment', paymentController.addPayment);
 
 module.exports = router;
