@@ -12,6 +12,7 @@ const UserSchema = new mongoose.Schema({
   password: {
     type: String,
     required: true,
+    index: { unique: true, dropDups: true },
   },
   income: {
     type: Number,

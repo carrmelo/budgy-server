@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.connect(
   process.env.MONGO_ENDPOINT || 'mongodb://localhost:27017/budgy',
-  { useNewUrlParser: true },
+  { useNewUrlParser: true, useCreateIndex: true },
 );
 
 const db = mongoose.connection;
