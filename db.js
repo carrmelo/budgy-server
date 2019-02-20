@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/budgy', { useNewUrlParser: true });
+mongoose.connect(
+  process.env.MONGO_ENDPOINT || 'mongodb://localhost:27017/budgy',
+  { useNewUrlParser: true },
+);
 
 const db = mongoose.connection;
 

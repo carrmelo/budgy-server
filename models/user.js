@@ -15,7 +15,6 @@ const UserSchema = new mongoose.Schema({
   },
   income: {
     type: Number,
-    required: true,
   },
   payments: [
     { payment: { type: mongoose.Schema.Types.ObjectId, ref: 'Payment' } },
