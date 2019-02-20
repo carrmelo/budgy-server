@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 
 const PaymentSchema = new mongoose.Schema({
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true,
+  },
   name: {
     type: String,
     required: true,
@@ -15,10 +20,14 @@ const PaymentSchema = new mongoose.Schema({
   },
   months: [
     {
-      type: 'String',
-      required: false,
+      type: String,
+      required: true,
     },
   ],
+  expiration: {
+    type: Date,
+    required: false,
+  },
 });
 
 module.exports = mongoose.model('Payment', PaymentSchema);

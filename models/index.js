@@ -1,3 +1,4 @@
+const User = require('./user');
 const Payment = require('./payment');
 
-module.exports = { Payment };
+module.exports = { User, Payment };

@@ -5,6 +5,7 @@ exports.addPayment = async ctx => {
     const newPayment = new Payment(ctx.request.body);
     newPayment.save();
     ctx.status = 201;
+    ctx.body = newPayment;
   } catch (e) {
     ctx.status = 400;
     ctx.body = {
